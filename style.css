@@ -119,6 +119,21 @@
 			justify-content: space-around;
 			display: flex;
 		}
+
+		.content .heading {
+			width: 100%;
+			height: 10%;
+			color: #333333;
+			justify-content: space-around;
+			display: flex;
+		}
+
+		.attention {
+			background-color: peachpuff;
+			font-size: large;
+			font-family:sans-serif;
+		}
+
 		.content .upper div{
 			width: 25%;
 			

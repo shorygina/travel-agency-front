@@ -6,7 +6,7 @@
     <title>Traveller</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body onload="startShow()">
     <section>
 		<video class="video" src="src/video/Natural.webm" autoplay loop muted></video>
 		<nav>
@@ -56,8 +56,9 @@
 		</div>
 
 		<div class="content">
-			<h1>Специальные предложения</h1>
-			<div></div>
+			<div class="heading">
+				<h1>Специальные предложения</h1>
+			</div>
 			<div class="upper">
 				<div>
 					<img src="src/images/turkey.jpg">
@@ -104,35 +105,46 @@
 			<video src="video/video.webm" controls></video>
 			<div>
 				<h2>О нашей компании</h2>
-				<p>Мы организуем поездки в более 100 стран мира. Также на нашем сайте есть интеллектуальный помощник, способный подсказать, в какое путешествие вам лучше отправиться. Подробнее обо всем этом смотрите в нашем видео.</p>
+				<br>
+				<p>Мы организуем поездки в более 100 стран мира. Также на нашем сайте есть <b>интеллектуальный помощник</b>, способный подсказать, в какое путешествие вам лучше отправиться. Подробнее обо всем этом смотрите в нашем видео.</p>
+				<br>
+				<form name = "animationbutton">
+					<input type = "button" name = "but" onClick = "gotoURL()" class="attention">
+				</form>
 			</div>
 		</div>
 
 		<div class="last">
 			<div class="left">
+				<div>
+					<h1>Наши рубрики</h1>
+				</div>
 				<div class="last3">
-					<img src="image/nepal.jpg">
+					<img src="src/images/colorit.jpg">
 					<div>
-						<h3>Top destination</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam velit et nulla optio mollitia est, voluptas? Pariatur perferendis veritatis aperiam maiores at! Quos autem cum laboriosam, mollitia eius. Distinctio, unde.</p>
+						<h3>Колорит стран</h3>
+						<br>
+						<p>Каждую неделю рассказываем о выбранной стране, в которую мы организовываем поездки. Помимо основной информации Вы также сможете найти интересные факты и наиболее интересные места для посещения.</p>
 					</div>
 				</div>
 				<div class="last3">
-					<img src="image/bali.jpg">
+					<img src="src/images/reviews.jpg">
 					<div>
-						<h3>Top Advanture</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, perspiciatis. Id et nisi obcaecati unde velit, sequi modi aliquid sapiente error saepe ullam aliquam dicta! Expedita ut tempora, blanditiis nulla!</p>
+						<h3>Фотоотчеты</h3>
+                        <br>
+						<p>Читайте отзывы и смотрите фотографии туристов, недавно вернувшихся из организованных нами туров</p>
 					</div>
 				</div>
 				<div class="last3">
-					<img src="image/norway.jpg">
+					<img src="src/images/events.jpg">
 					<div>
-						<h3>Top Food festival</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sequi, quasi repudiandae vel facilis, voluptatibus tempora optio culpa doloremque iure consequatur eaque? Optio omnis necessitatibus ad illo placeat delectus obcaecati.</p>
+						<h3>Анонсы специальных туров</h3>
+                        <br>
+						<p>Следите за анонсами специальных туров, приуроченных к национальным событиям разных стран</p>
 					</div>
 				</div>
 			</div>
-			<img src="image/var.jpg">
+			<img src="src/images/bookmark.jpg">
 		</div>
 	</section>
 	<footer>
@@ -165,5 +177,6 @@
 			</div>
 		</div>
 	</footer>
+<script type="text/javascript" src="src/js/button.js"></script>
 </body>
 </html>
