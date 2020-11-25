@@ -269,4 +269,13 @@
 			font-size: 16px;
 		}
 
-
+		.content .tour {
+			position: relative;
+			height: auto;
+			clear: both;
+		}
+		.content .upper {
+			position: relative;
+			height: 60%;
+			clear: both;
+		}
