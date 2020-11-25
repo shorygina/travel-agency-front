@@ -6,7 +6,7 @@
     <title>Traveller</title>
     <link rel="stylesheet" href="style.css" />
 </head>
-<body onload="startShow()">
+<body>
     <section>
 		<video class="video" src="src/video/Natural.webm" autoplay loop muted></video>
 		<nav>
@@ -109,7 +109,8 @@
 				<p>Мы организуем поездки в более 100 стран мира. Также на нашем сайте есть <b>интеллектуальный помощник</b>, способный подсказать, в какое путешествие вам лучше отправиться. Подробнее обо всем этом смотрите в нашем видео.</p>
 				<br>
 				<form name = "animationbutton">
-					<input type = "button" name = "but" onClick = "gotoURL()" class="attention buttons">
+					<!--input type = "button" name = "but" onClick = "gotoURL()" class="buttons" text="Перейти к интеллектуальному помощнику"-->
+					<button class="buttons">Перейти к интеллектуальному помощнику</button>
 				</form>
 			</div>
 		</div>
@@ -178,6 +179,5 @@
 			</div>
 		</div>
 	</footer>
-<script type="text/javascript" src="src/js/button.js"></script>
 </body>
 </html>
