@@ -179,9 +179,9 @@
 			font-size: 20px;
 		}
 		.last img{
-			margin-top: 0.5%;
+			margin-top: 5.5%;
 			width: 40%;
-			height: 93%;
+			height: 86%;
 		}
 		.last .left .last3{
 			display: flex;
@@ -226,7 +226,7 @@
 			font-weight: bold;
 		}
 		footer .copyright{
-			width: 30%;
+			width: 31%;
 			height: 100%;
 			align-self: center;
 			font-size: 12px;
