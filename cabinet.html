@@ -53,29 +53,56 @@
 		}
 	</script>
 
-	<!--Курсы валют-->
+	<!--Курс доллара-->
 	<script type="text/javascript">
 		google.charts.load('current', { 'packages': ['corechart'] });
 		google.charts.setOnLoadCallback(drawChart);
 
 		function drawChart() {
 			var data = google.visualization.arrayToDataTable([
-				['Date', 'Доллар', 'Евро'],
-				[new Date(2020, 9, 25), 75.8146, 89.8934],
-				[new Date(2020, 9, 26), 75.4727, 89.888],
-				[new Date(2020, 9, 27), 75.4518, 90.0291],
-				[new Date(2020, 9, 29), 75.8599, 90.4629],
-				[new Date(2020, 9, 30), 76.1999, 91.2037],
-				[new Date(2020, 10, 1), 76.3203, 91.3096],
-				[new Date(2020, 10, 2), 75.6151, 91.3052],
+				['Date', 'Доллар'],
+				[new Date(2020, 9, 25), 75.8146],
+				[new Date(2020, 9, 26), 75.4727],
+				[new Date(2020, 9, 27), 75.4518],
+				[new Date(2020, 9, 29), 75.8599],
+				[new Date(2020, 9, 30), 76.1999],
+				[new Date(2020, 10, 1), 76.3203],
+				[new Date(2020, 10, 2), 75.6151],
 			]);
 
 			var options = {
-				title: 'Курсы валют',
+				title: 'Курс доллара',
 				vAxis: { minValue: 75 }
 			};
 
-			var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+			var chart = new google.visualization.AreaChart(document.getElementById('chart_div_dollar'));
+			chart.draw(data, options);
+		}
+	</script>
+
+	<!--Курс евро-->
+	<script type="text/javascript">
+		google.charts.load('current', { 'packages': ['corechart'] });
+		google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['Date', 'Евро'],
+				[new Date(2020, 9, 25), 89.8934],
+				[new Date(2020, 9, 26), 89.888],
+				[new Date(2020, 9, 27), 90.0291],
+				[new Date(2020, 9, 29), 90.4629],
+				[new Date(2020, 9, 30), 91.2037],
+				[new Date(2020, 10, 1), 91.3096],
+				[new Date(2020, 10, 2), 91.3052],
+			]);
+
+			var options = {
+				title: 'Курс евро',
+				vAxis: { minValue: 89 }
+			};
+
+			var chart = new google.visualization.AreaChart(document.getElementById('chart_div_euro'));
 			chart.draw(data, options);
 		}
 	</script>
@@ -101,6 +128,36 @@
 			};
 
 			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+			chart.draw(data, options);
+		}
+	</script>
+
+	<!--Статистика по отелям-->
+	<script>
+		google.charts.load('current', { packages: ['corechart', 'bar'] });
+		google.charts.setOnLoadCallback(drawMultSeries);
+
+		function drawMultSeries() {
+			var data = google.visualization.arrayToDataTable([
+         ['Отель', 'Число остановок', { role: 'style' }],
+         ['Хостел', 3, 'red'],
+		 ['Отель 1 звезда', 2, 'blue'],
+		 ['Отель 2 звезды', 2, 'pink'],
+         ['Отель 3 звезды', 2, 'silver'],
+         ['Отель 4 звезды', 5, 'gold'],
+         ['Отель 5 звёзд', 1, 'green' ],
+      ]);
+
+			var options = {
+				title: 'Статистика по отелям',
+				hAxis: {
+					title: 'Тип отеля'
+				}
+			};
+
+			var chart = new google.visualization.ColumnChart(
+				document.getElementById('chart_div'));
 
 			chart.draw(data, options);
 		}
@@ -154,8 +211,10 @@
 					<h2>Личный кабинет</h2>
 				</header>
 				<div id="calendar_basic" style="width: 1000px; height: 350px;"></div>
-				<div id="chart_div" style="width: 100%; height: 500px;"></div>
-				<div id="piechart" style="width: 900px; height: 500px;"></div>
+				<div id="chart_div_dollar" style="width: 100%; height: 500px;"></div>
+				<div id="chart_div_euro" style="width: 100%; height: 500px;"></div>
+				<div id="piechart" style="width: 1800px; height: 600px;"></div>
+				<div id="chart_div" style="width: 1000px; height: 600px;"></div>
 			</div>
 
 		</section>
