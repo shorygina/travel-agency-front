@@ -2850,3 +2850,9 @@ img {
 				}
 
 	}
+
+.form-group {
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 24px;
+}

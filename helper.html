@@ -51,13 +51,72 @@
 			<header>
 				<h2>Интеллектуальный помощник</h2>
 			</header>
-			<label class="col-4 col-6-medium col-12-small" style="width: 50%;">Текст</label>
-			<div class="col-4 col-6-medium col-12-small"></div>
-			<input class="col-4 col-6-medium col-12-small" placeholder="ФИО" type="text" style="width: 50%;"/>
-			<div class="col-4 col-6-medium col-12-small">
-				<label>Текст</label>
-				<input placeholder="ФИО" type="text"/>
+			<div class="row form-group">
+				<div class="col-8">
+					<section>
+						<label>Сколько взрослых будет в Вашей группе?</label>
+					</section>
+				</div>
+				<div class="col-4">
+					<section>
+						<input placeholder="количество взрослых" type="text" name="anum" style="width: 100%"/>
+					</section>
+				</div>
 			</div>
+			<div class="row form-group">
+				<div class="col-8">
+					<section>
+						<label>Сколько детей будет в Вашей группе?</label>
+					</section>
+				</div>
+				<div class="col-4">
+					<section>
+						<input placeholder="количество детей" type="text" name="cnum" style="width: 100%"/>
+					</section>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-8">
+					<section>
+						<label>Сколько денег (максимально) Вы готовы потратить на поездку?</label>
+					</section>
+				</div>
+				<div class="col-4 form-group">
+					<section>
+						<input placeholder="ваш бюджет" type="number" name="mon" style="width: 100%" class="input"/>
+					</section>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-8">
+					<section>
+						<label>Какой тип отдыха Вы предпочитаете?</label>
+					</section>
+				</div>
+				<div class="col-4 form-group">
+					<section>
+						<select name="ty" style="width: 100%">
+							<option>Пляжный</option>
+							<option>Экскурсионный</option>
+							<option>Экстримальный</option>
+							<option>Развлекательный</option>
+						</select>
+					</section>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-8">
+					<section>
+						<label>Какая максимальная длительность перелета Вам подходит?</label>
+					</section>
+				</div>
+				<div class="col-4">
+					<section>
+						<input placeholder="длительность перелета" type="number" name="duration" style="width: 100%"/>
+					</section>
+				</div>
+			</div>
+			<a href="#" class="button icon solid" style="margin-top: 5px">Подобрать тур</a>
 		</div>
 
 	</section>
