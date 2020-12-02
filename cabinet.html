@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<title>Туры</title>
 	<meta charset="utf-8" />
@@ -7,78 +8,105 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<!--График поездок-->
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["calendar"]});
-      google.charts.setOnLoadCallback(drawChart);
+	<script type="text/javascript">
+		google.charts.load("current", { packages: ["calendar"] });
+		google.charts.setOnLoadCallback(drawChart);
 
-	  function drawChart() {
-       var dataTable = new google.visualization.DataTable();
-       dataTable.addColumn({ type: 'date', id: 'Date' });
-       dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
-       dataTable.addRows([
-          [ new Date(2019, 3, 13), -1 ],
-          [ new Date(2019, 3, 14), -1 ],
-          [ new Date(2019, 3, 15), -1 ],
-          [ new Date(2019, 3, 16), -1 ],
-          [ new Date(2019, 3, 17), -1 ],
-		  [ new Date(2019, 7, 10), -1 ],
-		  [ new Date(2019, 7, 11), -1 ],
-		  [ new Date(2019, 7, 12), -1 ],
-		  [ new Date(2019, 7, 13), -1 ],
-		  [ new Date(2019, 7, 14), -1 ],
-		  [ new Date(2019, 7, 15), -1 ],
-		  [ new Date(2019, 7, 16), -1 ],
-		  [ new Date(2019, 7, 17), -1 ],
-		  [ new Date(2019, 7, 18), -1 ],
-		  [ new Date(2019, 7, 19), -1 ],
-          [ new Date(2020, 9, 4), -1 ],
-          [ new Date(2020, 9, 5), -1 ],
-          [ new Date(2020, 9, 12), 1 ],
-          [ new Date(2020, 9, 13), 1 ],
-          [ new Date(2020, 9, 14), 1 ],
-          [ new Date(2020, 9, 15), 1 ],
-          [ new Date(2020, 9, 16), 1 ],
-          [ new Date(2020, 9, 17), 1 ]
-        ]);
+		function drawChart() {
+			var dataTable = new google.visualization.DataTable();
+			dataTable.addColumn({ type: 'date', id: 'Date' });
+			dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
+			dataTable.addRows([
+				[new Date(2019, 3, 13), -1],
+				[new Date(2019, 3, 14), -1],
+				[new Date(2019, 3, 15), -1],
+				[new Date(2019, 3, 16), -1],
+				[new Date(2019, 3, 17), -1],
+				[new Date(2019, 7, 10), -1],
+				[new Date(2019, 7, 11), -1],
+				[new Date(2019, 7, 12), -1],
+				[new Date(2019, 7, 13), -1],
+				[new Date(2019, 7, 14), -1],
+				[new Date(2019, 7, 15), -1],
+				[new Date(2019, 7, 16), -1],
+				[new Date(2019, 7, 17), -1],
+				[new Date(2019, 7, 18), -1],
+				[new Date(2019, 7, 19), -1],
+				[new Date(2020, 9, 4), -1],
+				[new Date(2020, 9, 5), -1],
+				[new Date(2020, 9, 12), 1],
+				[new Date(2020, 9, 13), 1],
+				[new Date(2020, 9, 14), 1],
+				[new Date(2020, 9, 15), 1],
+				[new Date(2020, 9, 16), 1],
+				[new Date(2020, 9, 17), 1]
+			]);
 
-       var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
+			var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
 
-       var options = {
-         title: "График поездок",
-         height: 350,
-       };
+			var options = {
+				title: "График поездок",
+				height: 350,
+			};
 
-       chart.draw(dataTable, options);
-   }
+			chart.draw(dataTable, options);
+		}
 	</script>
-	
+
 	<!--Курсы валют-->
 	<script type="text/javascript">
-		google.charts.load('current', {'packages':['corechart']});
+		google.charts.load('current', { 'packages': ['corechart'] });
 		google.charts.setOnLoadCallback(drawChart);
-  
+
 		function drawChart() {
-		  var data = google.visualization.arrayToDataTable([
-			['Date', 'Доллар', 'Евро'],
-			[new Date(2020, 9, 25),  75.8146,       89.8934],
-			[new Date(2020, 9, 26),  75.4727,      89.888],
-			[new Date(2020, 9, 27),  75.4518,       90.0291],
-			[new Date(2020, 9, 29),  75.8599,       90.4629],
-			[new Date(2020, 9, 30),  76.1999,       91.2037],
-			[new Date(2020, 10, 1),  76.3203,       91.3096],
-			[new Date(2020, 10, 2),  75.6151,       91.3052],
-		  ]);
-  
-		  var options = {
-			title: 'Курсы валют',
-			vAxis: {minValue: 75}
-		  };
-  
-		  var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-		  chart.draw(data, options);
+			var data = google.visualization.arrayToDataTable([
+				['Date', 'Доллар', 'Евро'],
+				[new Date(2020, 9, 25), 75.8146, 89.8934],
+				[new Date(2020, 9, 26), 75.4727, 89.888],
+				[new Date(2020, 9, 27), 75.4518, 90.0291],
+				[new Date(2020, 9, 29), 75.8599, 90.4629],
+				[new Date(2020, 9, 30), 76.1999, 91.2037],
+				[new Date(2020, 10, 1), 76.3203, 91.3096],
+				[new Date(2020, 10, 2), 75.6151, 91.3052],
+			]);
+
+			var options = {
+				title: 'Курсы валют',
+				vAxis: { minValue: 75 }
+			};
+
+			var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+			chart.draw(data, options);
 		}
-	  </script>
+	</script>
+
+	<!--Диаграмма поездок по странам-->
+	<script type="text/javascript">
+		google.charts.load('current', { 'packages': ['corechart'] });
+		google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+
+			var data = google.visualization.arrayToDataTable([
+				['Страна', 'Количество посещений'],
+				['Тайланд', 2],
+				['Индия', 1],
+				['Турция', 5],
+				['Норвегия', 1],
+				['Япония', 4]
+			]);
+
+			var options = {
+				title: 'Мои поездки'
+			};
+
+			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+			chart.draw(data, options);
+		}
+	</script>
 </head>
+
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 		<section id="header1">
@@ -86,7 +114,8 @@
 				<nav id="nav">
 					<ul>
 						<li>
-							<h1 id="logo"><a class="icon solid fa-plane-departure" href="index.html"></a><a href="index.html">
+							<h1 id="logo"><a class="icon solid fa-plane-departure" href="index.html"></a><a
+									href="index.html">
 								</a></h1>
 						</li>
 						<li><a class="icon solid fa-home" href="index.html"><span>Главная</span></a></li>
@@ -126,6 +155,7 @@
 				</header>
 				<div id="calendar_basic" style="width: 1000px; height: 350px;"></div>
 				<div id="chart_div" style="width: 100%; height: 500px;"></div>
+				<div id="piechart" style="width: 900px; height: 500px;"></div>
 			</div>
 
 		</section>
@@ -210,4 +240,5 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 </body>
+
 </html>
