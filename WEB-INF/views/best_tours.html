@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Туры</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+<body class="homepage is-preload">
+<div id="page-wrapper">
+    <section id="header1">
+        <div class="container" style="padding-bottom: 0;">
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <h1 id="logo"><a class="icon solid fa-plane-departure" href="index.jsp"></a><a href="index.html">
+                        </a></h1>
+                    </li>
+                    <li><a class="icon solid fa-home" href="index.jsp"><span>Главная</span></a></li>
+                    <li><a class="icon solid fa-user" href="cabinet.html"><span>Личный кабинет</span></a></li>
+                    <li>
+                        <a href="toures.html" class="icon fa-calendar-alt"><span>Туры</span></a>
+                        <ul>
+                            <li><a href="toures.html">Групповые туры</a></li>
+                            <li><a href="photos.html">Индивидуальные туры</a></li>
+                            <li><a href="aboutcountries.html">Горящие туры</a></li>
+                            <li><a href="aboutcountries.html">Сезонные туры</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="helper.html" class="icon solid fa-book-reader"><span>Интеллектуальный помощник</span></a>
+                        <ul>
+                            <li><a href="helper.html">Выбираем тур</a></li>
+                            <li><a href="chatbot/index.html">Собираем вещи</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="icon solid fa-users" href="index.jsp"><span>Клуб путешествий</span></a>
+                        <ul>
+                            <li><a href="feedback.html">Отзывы</a></li>
+                            <li><a href="aboutcountries.html">Рассказываем о странах</a></li>
+                            <li><a href="photos.html">Фото туристов</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="icon solid fa-map-marked-alt" href="index.jsp"><span>О нас</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <header>
+                <h2>Наиболее подходящие Вам туры</h2>
+            </header>
+            <div class="row aln-center">
+                <div class="col-6">
+                    <img class="image featured" th:src="${image1}" alt="" />
+                </div>
+                <div class="col-6">
+                    <h1 style="text-align: left;" th:text="${country1}"></h1>
+                    <p style="text-align: justify;" th:text="${description1}"></p>
+                    <a th:href="${page1}" class="button">Подробнее</a>
+                </div>
+            </div>
+            <div class="row aln-center">
+                <div class="col-6">
+                    <img class="image featured" th:src="${image2}" alt="" />
+                </div>
+                <div class="col-6">
+                    <h1 style="text-align: left;" th:text="${country2}"></h1>
+                    <p style="text-align: justify;" th:text="${description2}"></p>
+                    <a th:href="${page2}" class="button">Подробнее</a>
+                </div>
+            </div>
+            <div class="row aln-center">
+                <div class="col-6">
+                    <img class="image featured" th:src="${image3}" alt="" />
+                </div>
+                <div class="col-6">
+                    <h1 style="text-align: left;" th:text="${country3}"></h1>
+                    <p style="text-align: justify;" th:text="${description3}"></p>
+                    <a th:href="${page3}" class="button">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="footer">
+        <div class="container">
+            <header>
+                <h2>Не смогли подобрать тур? <strong>Мы Вам поможем!</strong></h2>
+            </header>
+            <div class="row">
+                <div class="col-6 col-12-medium">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="row gtr-50">
+                                <div class="col-6 col-12-small">
+                                    <input name="name" placeholder="ФИО" type="text" />
+                                </div>
+                                <div class="col-6 col-12-small">
+                                    <input name="email" placeholder="Email" type="text" />
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" placeholder="Информация о желаемых турах"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <a href="#" class="form-button-submit button icon solid fa-envelope">Отправить
+                                        заявку</a>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <section>
+                        <p>Наши контакты:</p>
+                        <div class="row">
+                            <div class="col-6 col-12-small">
+                                <ul class="icons">
+                                    <li class="icon solid fa-home">
+                                        129110 Москва,<br />
+                                        Проспект Мира, 53
+                                    </li>
+                                    <li class="icon solid fa-phone">
+                                        8 (903) 858-5858
+                                    </li>
+                                    <li class="icon solid fa-envelope">
+                                        <a href="#">help@traveller.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-12-small">
+                                <ul class="icons">
+                                    <li class="icon brands fa-twitter">
+                                        <a href="#">@travel</a>
+                                    </li>
+                                    <li class="icon brands fa-instagram">
+                                        <a href="#">instagram.com/traveller</a>
+                                    </li>
+                                    <li class="icon brands fa-dribbble">
+                                        <a href="#">dribbble.com/traveller</a>
+                                    </li>
+                                    <li class="icon brands fa-facebook-f">
+                                        <a href="#">facebook.com/traveller</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="copyright" class="container">
+            <ul class="links">
+                <li>&copy; Татьяна Шорыгина & Карелина Елена, 2020</li>
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

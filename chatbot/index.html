@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+    <link rel="icon" href="bot.png" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />ВВ
+  </head>
+
+  <body>
+    <div id="container" class="container">
+      <div id="chat" class="chat">
+        <div id="messages" class="messages">
+          <div id="bot" class="bot response">
+            <img src="bot-mini.png" class="avatar" /><span
+              >Здравствуйте! Я помогу Вам взять с собой только самые необходимые
+              вещи. Подскажите, пожалуйста, максимальный объём чемодана</span
+            >
+          </div>
+        </div>
+        <input
+          id="input"
+          type="text"
+          placeholder="Перечислите вещи"
+          autocomplete="off"
+          autofocus="true"
+        />
+      </div>
+      <img src="bot.png" alt="Robot cartoon" height="500vh" />
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="constants.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>
